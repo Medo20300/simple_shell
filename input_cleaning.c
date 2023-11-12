@@ -1,4 +1,4 @@
-include "shell.h"
+#include "shell.h"
 #include <stdio.h>
 int status;
 
@@ -193,6 +193,7 @@ void handle_error(char *command, char *argument)
 
     free(line_number_strings);
 }
+
 /**
  * evaluate_variables - Evaluates variables in the provided argument.
  * @argument: The argument to be evaluated.

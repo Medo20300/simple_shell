@@ -45,7 +45,7 @@ int deallocate_aliases(NewName *ptr_to_update_name)
 int process_alias_check(char **arguments, NewName *newName_head)
 
 {
-        /Check if newName_head is NULL/
+        /*Check if newName_head is NULL*/
         if (newName_head == NULL)
         return (YES);
 
@@ -55,14 +55,14 @@ int process_alias_check(char **arguments, NewName *newName_head)
         switch (comparisonString(*arguments, newName_head->name, ComPareString))
         {
         case YES:
-        /Free the original arguments and update with the alias value/
+        /*Free the original arguments and update with the alias value*/
         free(*arguments);
         *arguments = strdup(newName_head->value);
         return (ExecuteCommand);
         default:
         break;
         }
-        /Move to the next alias in the list/
+        /*Move to the next alias in the list*/
         newName_head = newName_head->next;
         }
 
