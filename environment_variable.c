@@ -75,7 +75,7 @@ int set_environment_variable(const char *gold_Name, const char *nEw_result) {
     free(buff);
     buff = buff_temporary;
 
-    /* Check if the variable exists in the environment*/
+    /*Check if the variable does not exist in the environment*/
     if (object_pointer == NULL) {
         length = my_new_list_length(environ, NULL);
         gold_environ = my_updated_array_copy(environ, length + 1);
@@ -88,13 +88,19 @@ int set_environment_variable(const char *gold_Name, const char *nEw_result) {
         return (ByPassFork);
     }
 
-    /*Replace the value of an existing variable*/
-    for (length = my_new_list_length(environ, (char *)gold_Name); environ[length] != NULL; length++) {
+    /* Check if the variable exists in the environment*/
+    if (object_pointer != NULL) {
+        /*Replace the value of an existing variable*/
+        length = my_new_list_length(environ, (char *)gold_Name);
         free(environ[length]);
         environ[length] = buff;
+
+        status = 0;
+
+        return (ByPassFork);
     }
 
-    status = 0;
+    /*Additional conditions can be added if needed*/
 
     return (ByPassFork);
 }
