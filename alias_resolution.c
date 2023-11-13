@@ -3,7 +3,7 @@
 int status;
 
 /**
- * deallocate_aliases - Frees all memory allocated for the alias list.
+ * deallocate_aliases - Frees all memory allocated for alias list.
  * @ptr_to_update_name: pointer to head_of_alias lists
  *
  * Return: TRUE on success.
