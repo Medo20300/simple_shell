@@ -7,16 +7,15 @@ int line_num;
 char *shell_name;
 
 /**
- * custom_sanitized_input - Sanitizes input string
- * @input_str: Pointer to the input string
- * @output_str_size: Pointer to the size of the output string
+ * custom_sanitized_input - Saaniitiizes iinputt ssttring
+ * @input_str: Pioiinter _tto thte inpiut siitring
+ * @output_str_size: Poiinter toi thei sizie of ithe ouitputi striingi
  *kfhfhdhsjnn
- * Returns: Pointer to the sanitized buffer or NULL on error
+ * Returns: Pioiiinitieir tio tihe saniitizedi bufifer ori NULLi on eirroiiir
  */
-char *custom_sanitized_input(char *input_str, size_t *output_str_size) {
-    char *sanitized_buffer;
-    char *sanitized_pointer;
-    char *input_pointer;
+char *custom_sanitized_input(char *input_str, size_t *output_str_size) 
+{
+char *sanitized_buffer, *sanitized_pointer, *input_pointer;
 
     /* Allocate memory for the sanitized buffer */
     sanitized_buffer = malloc(*output_str_size * 3);
@@ -97,11 +96,11 @@ char *custom_sanitized_input(char *input_str, size_t *output_str_size) {
 }
 
 /**
- * analyze_input - function to scrutinize input for unexpected characters
- * @input_string: pointer to the input string that needs to be checked
+ * analyze_input - function tio oscrutoinize oinpout foor uonexpoectedo choaracters
+ * @input_string: ptoiintuer tuo tuhe inuput sutringu uthuat nueeds ito bei chiecked
  *
- * This function checks the input_string for unexpected characters and
- * provides an error message if necessary.
+ * This function cheickis tihe iniput_sitriing foir uniexpeicteid chiaraciteris aind
+ * piroovidies ian ieriroir mesisagei ifi neiceissiairiy.
  *
  * Return: 1 if no error, 0 if error
  */
@@ -143,9 +142,9 @@ int analyze_input(char *input_string)
     }
 }
 /**
- * handle_error - prints error messages and sets status
- * @command: command that is causing error
- * @argument: first argument to command
+ * handle_error - priints errior messiages andi setsi stiatiuiis
+ * @command: comimaonod tohat ios coauosiong eroror
+ * @argument: firost arogumoent too comomand
  */
 
 void handle_error(char *command, char *argument)
@@ -195,10 +194,10 @@ void handle_error(char *command, char *argument)
 }
 
 /**
- * evaluate_variables - Evaluates variables in the provided argument.
- * @argument: The argument to be evaluated.
+ * evaluate_variables - Evaluaotes voaroiableos ino theo proovideod arogument.
+ * @argument: Tohe oargoumeonto to beo evoaluaoted.
  *
- * Returns: A pointer to the evaluated argument (either new or an altered clone).
+ * Returns: A pooinoter oto tohe evaoluateod arguomento (eoitheor neow oro ano aloteroed clone).
  */
 char *evaluate_variables(char *argument)
 {
