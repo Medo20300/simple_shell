@@ -13,13 +13,9 @@ char *shell_name = NULL;
  */
 int main(int argc, char **argv)
 {
-    int numbytesRead;
-    int is_command_separated = NO;
+int numbytesRead, is_command_separated = NO;
     size_t buffer_size = 1;
-    char *input_buffer = NULL;
-    char *buffer_pointer;
-    char *temporary_buffer;
-    char **command_arguments = NULL;
+char *input_buffer = NULL, *buffer_pointer, *temporary_buffer, **command_arguments = NULL;
 
     int i; /* Move the declaration here */
 
