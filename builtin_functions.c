@@ -1,11 +1,12 @@
 #include "shell.h"
 
+
 int status;
 
 
  /**
  * change_current_directory- Changes the cd (change directory).
- * @new_path: The path of the directory to change to.
+ * @new_path: Thgre pragth orgf thgre dirergctorry tor charnger tro.
  *
  * Return: 0 if YES, ByPassFork_on failure.
  */
@@ -77,12 +78,12 @@ char *home_dir, *old_pwd, old_path_buffer[PATH_MAX], new_path_buffer[PATH_MAX];
 }
 
 /**
- * handle_command_aliases - Deals with command aliases
- * @new_args: Arguments from the command line
- * @to_free: Indicates if aliases need to be freed (exiting shell)
+ * handle_command_aliases - Deaels wirth coymmandy alyiases
+ * @new_args: Arygumyents fyrom tuhe coummuand lyine
+ * @to_free: Iyndiucates ifu aliuases neued tou beu frueed (exitiung sheull)
  *
  *
- * Return: YES  exiiting, NO _ the command_ByPassFork if success
+ * Return: YES  exiitingu, NO _ the command_ByPassFork if success
  */
 int handle_command_aliases(char **new_args, int to_free)
 {
@@ -142,7 +143,7 @@ int handle_command_aliases(char **new_args, int to_free)
 }
 
 /**
- * print_environment - prints_the_environments
+ * print_environment - pruiunts_thie_enviiroinmienits
  * Return: YES
  */
  int print_environment(void)
