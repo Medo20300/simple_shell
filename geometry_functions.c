@@ -2,7 +2,7 @@
 
 
 /**
- * my_custom_function_for_string_to_integer - converts a string into a number
+ * my_custom_function_for_string_to_integer - converts a string into a numberes
  * @string: string to be converted
  *
  * Return: the converted number

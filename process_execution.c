@@ -4,7 +4,7 @@ int status;
 
 char *shell_name;
 /**
- * process_commands - processes a series of commands, handling logical operators
+ * process_commands - processes a series of commands, handling logical operatores
  * @commands: command and arguments
  *
  * Return: TRUE if all commands succeed, FALSE if any command fails, or EXIT_SHELL if the user wants to exit the shell
