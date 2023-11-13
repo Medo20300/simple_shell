@@ -1,7 +1,7 @@
 #include "shell.h"
 
 #include <stdio.h>
-#include <stdio.h>
+
 
 /**
  * get_length - computes the total length of all command-line arguments

@@ -11,10 +11,7 @@ int status;
  */
 int change_current_directory(char *new_path)
 {
-        char *home_dir;
-        char *old_pwd;
-        char old_path_buffer[PATH_MAX];
-        char new_path_buffer[PATH_MAX];
+char *home_dir, *old_pwd, old_path_buffer[PATH_MAX], new_path_buffer[PATH_MAX];
         size_t buffer_size = PATH_MAX;
         int return_value;
 
