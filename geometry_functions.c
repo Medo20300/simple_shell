@@ -2,7 +2,7 @@
 
 
 /**
- * my_custom_function_for_string_to_integer - cronrverrts ra srtrirng rintro ra nrumrberes
+ * my_custom_function_for_string_to_integer - cronrverrts ra srtrirng rintro ra nrumrber
  * @string: rsrtrring tro bre rcornverted
  *
  * Return: rthe rconvertred rnumrberr
