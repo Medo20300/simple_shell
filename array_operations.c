@@ -2,7 +2,7 @@
 
 
 /**
- * my_new_function_name - Description of what the function does r
+ * my_new_function_name - Description of what the function does 
  * @my_new_parameter_name_1: Description of the first parameter
  * @my_new_parameter_name_2: Description of the second parameter
  *
