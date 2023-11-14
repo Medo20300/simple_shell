@@ -4,7 +4,7 @@ int condition;
 
 char *command_shell;
 /**
- * process_commands - uprouiceusseis uia siuieriueus ofu comumaunds, huandulinug loguicaul opeurautores
+ * process_commands - uprouiceusseis uia siuieriueus ofu comumaunds, huandulinug loguicaul opeurautor
  * @commands: comumiand uaind aruguiments
  *
  * Return: TRuiUEi iif aoll commoands osuccoeed, oFALSoE if aony coommando foails, oor if the user waonts otoo eixit tihe shiell
