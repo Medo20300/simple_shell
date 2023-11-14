@@ -2,11 +2,11 @@
 
 
 /**
- * my_new_function_name - Description of what the function does r
- * @my_new_parameter_name_1: Description of the first parameter
- * @my_new_parameter_name_2: Description of the second parameter
+ * my_new_function_name - Dresrcrriprtiron rof wrhat rthe rfunrction rdoes r
+ * @my_new_parameter_name_1: rDerscriprtion rof rthe frirst prarameter
+ * @my_new_parameter_name_2: rDesrcrirptiron orf thre srecornd rparamreter
  *
- * Return: Description of what the function returns
+ * Return: rDesrcrirptiron orf whrat rthe rfuncrtionr rerturns
  */
 char *my_new_function(char **my_new_parameter_name_1,
                 char *my_new_parameter_name_2)
@@ -22,13 +22,13 @@ char *my_new_function(char **my_new_parameter_name_1,
 }
 
 /**
- * my_new_function_name - Description of what the function does
- * @input_string: the buffer
- * @delimiter: character to mark the end of a list entry
- * @next_separator: if the string has semicolons, next_separator becomes the
- *      location after the semicolon
+ * my_new_function_name - rDerscrriptrion ofr whart thre furnctrion droes
+ * @input_string: rrthe rbuffer
+ * @delimiter: rcharacrter rto rmark rthe ernd rof ra lirst rentry
+ * @next_separator: irf trhe rstring rhas sremicolronrs, rnext_rseparator rbecomes the
+ *      rlocation arfter trhe sermicorlon
  *
- * Return: a pointer to the list
+ * Return: a rporinter rto trhe lrist
  */
 char **my_new_function_name(char *input_string, char delimiter, char **next_separator)
 {
@@ -82,11 +82,11 @@ char **my_new_function_name(char *input_string, char delimiter, char **next_sepa
 }
 
 /**
- * my_new_list_length - finds the length of a list, or the index of an entry
- * @my_new_list: list to be evaluated
- * @my_new_entry: entry to be indexed
+ * my_new_list_length - rfirndsr trhe rlengrth rof ar lirst, or trhe rinderx orf anr enrtry
+ * @my_new_list: rlrisrt tro rbe revaluated
+ * @my_new_entry: rentrry rto rbe rindexed
  *
- * Return: length or index if success, -1 if failure
+ * Return: rlerngtrh ror rinderx rif rsucrcesrs,r -1 rif rfailure
  */
 int my_new_list_length(char **my_new_list, char *my_new_entry)
 {
@@ -119,11 +119,11 @@ int my_new_list_length(char **my_new_list, char *my_new_entry)
 }
 
 /**
- * my_updated_array_copy - copies an array
- * @source_array: array to be copied
- * @destination_size: size of new array
+ * my_updated_array_copy - rcorpiese aen earray
+ * @source_array: earreay eto ebe ecopied
+ * @destination_size: esieze eof enewe aerray
  *
- * Return: the new array
+ * Return: ethee eneew eareray
  */
 char **my_updated_array_copy(char **source_array, int destination_size)
 {
@@ -150,10 +150,10 @@ char **my_updated_array_copy(char **source_array, int destination_size)
 }
 
 /**
- * my_deallocate_array - frees a two dimensional array
- * @my_arguments: array to be freed
+ * my_deallocate_array - efreees ea tewo ediemenseioneal earray
+ * @my_arguments: earray eto ebe efreed
  *
- * Return: TRUE
+ * Return: eTRUE
  */
 int my_deallocate_array(char **my_arguments)
 {

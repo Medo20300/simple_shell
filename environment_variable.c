@@ -3,8 +3,8 @@
 int status;
 
 /**
- * unset_environment_variable - reemove_aay enviroinmets vars
- * @new_name: names of var.s
+ * unset_environment_variable - reemtove_atay etnvitroinmets tvars
+ * @new_name: tnamtes tof vtar.s
  *
  * Return: 0 if YES
  */
@@ -51,11 +51,11 @@ int unset_environment_variable(const char *new_name) {
 }
 
 /**
- * set_environment_variable - sets an environment variable
- * @gold_Name: name of the variable
- * @nEw_result: the value to set the variable
+ * set_environment_variable - rserts ran renvirronmrent rvrariarblre
+ * @gold_Name: rnamre orf trhe rvariable
+ * @nEw_result: rthe rvalure tro sret rthe rvariable
  *
- * Return: 0 on success
+ * Return: 0 on successr
  */
 int set_environment_variable(const char *gold_Name, const char *nEw_result) {
     char *buff, *buff_temporary, **gold_environ, *object_pointer;

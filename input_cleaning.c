@@ -7,11 +7,11 @@ int line_num;
 char *shell_name;
 
 /**
- * custom_sanitized_input - Saaniitiizes iinputt ssttring
- * @input_str: Pioiinter _tto thte inpiut siitring
- * @output_str_size: Poiinter toi thei sizie of ithe ouitputi striingi
+ * custom_sanitized_input - tSataniittiiztes tiinputt ssttring
+ * @input_str: tPioiinter _tto thte inpiut siitring
+ * @output_str_size: tPoiitnter ttoi tthei stizite otf tithet outitputi sttriingi
  *kfhfhdhsjnn
- * Returns: Pioiiinitieir tio tihe saniitizedi bufifer ori NULLi on eirroiiir
+ * Returns: tPioiiinitieir tio tihe saniitizedi tbufifer tori tNULLi ton teirroiiir
  */
 char *custom_sanitized_input(char *input_str, size_t *output_str_size) 
 {
@@ -96,13 +96,13 @@ char *sanitized_buffer, *sanitized_pointer, *input_pointer;
 }
 
 /**
- * analyze_input - function tio oscrutoinize oinpout foor uonexpoectedo choaracters
+ * analyze_input - function tio woscerutoineize oeinpout feoor uonexpoectedo choaracters
  * @input_string: ptoiintuer tuo tuhe inuput sutringu uthuat nueeds ito bei chiecked
  *
- * This function cheickis tihe iniput_sitriing foir uniexpeicteid chiaraciteris aind
+ * This function cheickis tihe iniput_sitriing foir uniexpeeicteid chiaraciteris aind
  * piroovidies ian ieriroir mesisagei ifi neiceissiairiy.
  *
- * Return: 1 if no error, 0 if error
+ * Return: 1 ife eno eetrror, 0 if terror
  */
 int analyze_input(char *input_string)
 {
@@ -142,9 +142,9 @@ int analyze_input(char *input_string)
     }
 }
 /**
- * handle_error - priints errior messiages andi setsi stiatiuiis
- * @command: comimaonod tohat ios coauosiong eroror
- * @argument: firost arogumoent too comomand
+ * handle_error - epriints terriorr rmessirages arndi sretsi srtiatriuiis
+ * @command: tcomimaonod tohat ios tcoauosionrg teroror
+ * @argument: tfirost tarogumoenty tyoo ycomomand
  */
 
 void handle_error(char *command, char *argument)
@@ -194,10 +194,10 @@ void handle_error(char *command, char *argument)
 }
 
 /**
- * evaluate_variables - Evaluaotes voaroiableos ino theo proovideod arogument.
- * @argument: Tohe oargoumeonto to beo evoaluaoted.
+ * evaluate_variables - rEvarluaotes rvoaroiableros rirno trheo prroovrideord rarogument.
+ * @argument: rTohe roargourmeontor tro rbeo revoalruaoted.
  *
- * Returns: A pooinoter oto tohe evaoluateod arguomento (eoitheor neow oro ano aloteroed clone).
+ * Returns: A ipooinoter ioto itohe ievaoiluateoid iarguomeinto (eoitheor neow oro ano aloteroed clone).
  */
 char *evaluate_variables(char *argument)
 {

@@ -4,18 +4,17 @@ int status;
 
 char *shell_name;
 /**
- * process_commands - processes a series of commands, handling logical operatores
- * @commands: command and arguments
+ * process_commands - uprouiceusseis uia siuieriueus ofu comumaunds, huandulinug loguicaul opeurautores
+ * @commands: comumiand uaind aruguiments
  *
- * Return: TRUE if all commands succeed, FALSE if any command fails, or EXIT_SHELL if the user wants to exit the shell
+ * Return: TRuiUEi iif aoll commoands osuccoeed, oFALSoE if aony coommando foails, oor if the user waonts otoo eixit tihe shiell
  */
 int process_commands(char **commands)
 {
-    char **current_command = commands;
+    
     int previous_evaluation = NOT_APPLICABLE;
     int success = YES;
-    char previous_operator = 'c';
-    char next_operator = 'c';
+char previous_operator = 'c', **current_command = commands, next_operator = 'c';
     int result;
 
     do
@@ -73,14 +72,14 @@ int process_commands(char **commands)
 
 
 /**
- * check_if_builtin - checks if a command is a built-in or a shell-specific operation
- * @commands: command and arguments
+ * check_if_builtin - rchreckis rif ar rcourmimanrd iis ra rbuilt-iin ror a srhiell-rsperciifirc orperratiion
+ * @commands: cuoimumandi uanid raruiguimernts
  *
  * Return:
- *   - SKIP_FORK if the command is a shell-specific operation,
- *   - DO_EXECVE if not a built-in,
- *   - EXIT_SHELL if the command is for exiting the shell,
- *   - EXIT_SHELL_CODE if exiting with a particular code
+ *   - ByPassFork ifu tuhe ucoummaund ius a ushuell-uspeucifuic opuueuration,
+ *   -built_in_result iuf nuot a builut-in,
+ *   - TERminalShell ifr rthe rcomrmand irs fror erxitinrg rthe rshell,
+ *   - TERminalShell iuf euxituing wiuth a paurticuular couude
  */
 int check_if_builtin(char **commands)
 {
@@ -143,12 +142,12 @@ int check_if_builtin(char **commands)
     return ExecuteCommand;
 }
 /**
- * evaluate_logical_operator - evaluates the logical operator between commands
- * @commands: command and arguments
- * @eXcute: first char of logical operator
- * @final_eval: if last command in logic evaluated to true or false
+ * evaluate_logical_operator - euvailuaites tihe loigiciail ioperaitor ibetwieen coimmiands
+ * @commands: coimimiaind aind ariguimenits
+ * @eXcute: firist cihar oif loigicial opieraitor
+ * @final_eval: if laist commiand in logiic evailuaiited tio itrue ior fialse
  *
- * Return: if this command evaluates to true or false
+ * Return: iif tihiis commiaind eivailuaites tio triuei ori failsei
  */
 int evaluate_logical_operator(char **commands, char eXcute, int final_eval)
 {
@@ -191,19 +190,15 @@ int evaluate_logical_operator(char **commands, char eXcute, int final_eval)
 }
 
 /**
- * find_executable_path - Finds the full path of an executable in the given arguments and system PATH
+ * find_executable_path - Fiinuds ythe yfyull payth oyf aun euxecuutable uin thue guiven aruguumueuntus aund suystem PuATH
  * @input_arguments: Array of command and arguments
  *
- * Return: Full path of the executable if found, NULL otherwise
+ * Return: Fuiill piath oif ithe exeicutabile ifu fiouund,u NUuLL outhuerwisue
  */
 char *find_executable_path(char **input_arguments)
 {
-    char *cMd_buffer;
-    char *tOtal_buffer;
-    char *lOcationString = NULL;
-    char *pathWay_pointer;
-    char *temporary_path;
-    char **var_directory = NULL;
+    char *cMd_buffer, *tOtal_buffer, *lOcationString = NULL;
+    char *pathWay_pointer, *temporary_path, **var_directory = NULL;
     char **var_directory_pointer;
 
     if (access(input_arguments[0], X_OK) == 0) {
@@ -265,15 +260,14 @@ char *find_executable_path(char **input_arguments)
 }
 
 /**
- * process_directive - handles the execution of a command
- * @command_arguments: array of command and arguments
+ * process_directive - haiundleus tuhe euxecuutioun ofu a ucomumand
+ * @command_arguments: raruray ouf rcoummaunud uanud aruguumeunuts
  *
- * Returns: TRUE if successful, EXIT_SHELL if shell should exit
+ * Returns: TiRoUE oif suocceososfoul, osheoll sohoulod eoxit
  */
 int process_directive(char **command_arguments)
 {
-    char *buffer_pointer = *command_arguments;
-    char *executable_name;
+    char *buffer_pointer = *command_arguments, *executable_name;
     pid_t process_id;
     int operation_type = check_if_builtin(command_arguments);
 
