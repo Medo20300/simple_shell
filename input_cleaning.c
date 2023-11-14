@@ -1,10 +1,10 @@
 #include "shell.h"
 #include <stdio.h>
-int status;
+int condition;
 
-int line_num;
+int lineIndex;
 
-char *shell_name;
+char *command_shell;
 
 /**
  * custom_sanitized_input - tSataniittiiztes tiinputt ssttring
@@ -149,9 +149,9 @@ int analyze_input(char *input_string)
 
 void handle_error(char *command, char *argument)
 {
-    char *line_number_strings = my_custom_function_for_integer_to_string(line_num);
+    char *line_number_strings = my_custom_function_for_integer_to_string(lineIndex);
 
-    fprintf(stderr, "%s: %d", shell_name, line_num);
+    fprintf(stderr, "%s: %d", command_shell, lineIndex);
 
     switch (*command) {
         case ' ':
@@ -165,7 +165,7 @@ void handle_error(char *command, char *argument)
         case 'c':
             if (comparisonString("cd", command, ComPareString) == YES)
             {
-                    status = 2;
+                    condition = 2;
                     fprintf(stderr, ": cd: can't cd to %s\n", argument);
             }
             break;
@@ -178,14 +178,14 @@ void handle_error(char *command, char *argument)
         case ';':
         case '|':
         case '&':
-            status = 2;
+            condition = 2;
             fprintf(stderr, ": Syntax error: \"%c", *command);
             if (*command == *(command + 1))
                 fprintf(stderr, "%c", *command);
             fprintf(stderr, "\" unexpected\n");
             break;
         default:
-            status = 127;
+            condition = 127;
             fprintf(stderr, ": %s: not found\n", command);
             break;
     }
@@ -236,7 +236,7 @@ char *evaluate_variables(char *argument)
                 *next_pointer = '\0';
 
                 if (comparisonString("$?", current_pointer, ComPareString) == YES)
-                    temporary = my_custom_function_for_integer_to_string(status);
+                    temporary = my_custom_function_for_integer_to_string(condition);
                 else if (comparisonString("$$", current_pointer, ComPareString) == YES)
                     temporary = my_custom_function_for_integer_to_string(getpid());
                 else

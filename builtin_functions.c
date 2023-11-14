@@ -1,7 +1,7 @@
 #include "shell.h"
 
 
-int status;
+int condition;
 
 
  /**
@@ -23,7 +23,7 @@ char *home_dir, *old_pwd, old_path_buffer[PATH_MAX], new_path_buffer[PATH_MAX];
         home_dir = my_new_function(environ, "HOME=");
         if (home_dir == NULL)
         {
-        status = 2;
+        condition = 2;
         handle_error("cd", new_path);
         return (ByPassFork);
         }
@@ -40,7 +40,7 @@ char *home_dir, *old_pwd, old_path_buffer[PATH_MAX], new_path_buffer[PATH_MAX];
         old_pwd = my_new_function(environ, "OLDPWD=");
         if (old_pwd == NULL)
         {
-        status = 2;
+        condition = 2;
         handle_error("cd", new_path);
         return (ByPassFork);
         }
@@ -66,12 +66,12 @@ char *home_dir, *old_pwd, old_path_buffer[PATH_MAX], new_path_buffer[PATH_MAX];
 
         if (return_value == -1)
         {
-        status = 2;
+        condition = 2;
         handle_error("cd", new_path);
         return (ByPassFork);
         }
 
-        status = 0;
+        condition = 0;
         set_environment_variable("OLDPWD", (const char *)old_path_buffer);
 
         return (ByPassFork);
@@ -138,7 +138,7 @@ int handle_command_aliases(char **new_args, int to_free)
         return (ByPassFork);
         }
 
-        status = 0;
+        condition = 0;
         return (ByPassFork);
 }
 
@@ -157,7 +157,7 @@ int handle_command_aliases(char **new_args, int to_free)
         new_ptr++;
         } while (*new_ptr != NULL);
 
-        status = 0;
+        condition = 0;
 
         return (ByPassFork);
 }

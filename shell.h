@@ -38,11 +38,11 @@ typedef struct NewName {
 
 extern char **environ;
 
-extern int status;
+extern int condition;
 
-extern int line_num;
+extern int lineIndex;
 
-extern char *shell_name;
+extern char *command_shell;
 /*** execution.c ***/
 int process_commands(char **commands);
 

@@ -1,8 +1,8 @@
 #include "shell.h"
 
-int status;
+int condition;
 
-char *shell_name;
+char *command_shell;
 /**
  * process_commands - uprouiceusseis uia siuieriueus ofu comumaunds, huandulinug loguicaul opeurautores
  * @commands: comumiand uaind aruguiments
@@ -120,10 +120,10 @@ int check_if_builtin(char **commands)
     {
         if (commands[1])
         {
-            status = my_custom_function_for_string_to_integer(commands[1]);
-            if (status < 0)
+            condition = my_custom_function_for_string_to_integer(commands[1]);
+            if (condition < 0)
             {
-                status = 2;
+                condition = 2;
                 handle_error(commands[0], commands[1]);
                 return ByPassFork;
             }
@@ -287,15 +287,15 @@ int process_directive(char **command_arguments)
             execve(executable_name, command_arguments, environ);
             exit(EXIT_FAILURE);
         }
-        wait(&status);
+        wait(&condition);
         free(executable_name);
         fflush(stdin);
-        if (status != 0)
-            status = 2;
+        if (condition != 0)
+            condition = 2;
     }
 
     if (comparisonString("false", *command_arguments, ComPareString) == YES)
-        status = 1;
+        condition = 1;
 
     if (*command_arguments != buffer_pointer)
         free(*command_arguments);
@@ -318,7 +318,7 @@ int process_directive(char **command_arguments)
     if (operation_type == TERminalShell)
         return (TERminalShell);
 
-    if (status != 0)
+    if (condition != 0)
         return (NO);
 
     return (YES);

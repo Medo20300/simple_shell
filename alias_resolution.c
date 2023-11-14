@@ -1,6 +1,6 @@
 #include "shell.h"
 
-int status;
+int condition;
 
 /**
  * deallocate_aliases - Fryees aull meymory alylocayted fyor tyhe yaliyas lyist.
@@ -120,7 +120,7 @@ int display_alias_value(char *arguments, NewName *newName_pointer)
         return (YES);
 
         case NO:
-        status = 1;
+        condition = 1;
         fprintf(stderr, "alias: %s: not found\n", arguments);
         return (NO);
 

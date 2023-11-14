@@ -1,6 +1,6 @@
 #include "shell.h"
 
-int status;
+int condition;
 
 /**
  * unset_environment_variable - reemtove_atay etnvitroinmets tvars
@@ -24,7 +24,7 @@ int unset_environment_variable(const char *new_name) {
         new_buff = concatenate_strings_custom("unsetenv: variable not found\n", "");
         printf("%s", new_buff);  /*Use printf instead of write*/
         free(new_buff);
-        status = 2;
+        condition = 2;
         return (ByPassFork);
     } else {
         new_enviro_pointer = environ + new_length;
@@ -39,7 +39,7 @@ int unset_environment_variable(const char *new_name) {
         }
 
         *new_enviro_pointer = NULL;
-        status = 0;
+        condition = 0;
 
         printf("After loop:\n");
         for (ptr = environ; *ptr != NULL; ptr++) {
@@ -63,7 +63,7 @@ int set_environment_variable(const char *gold_Name, const char *nEw_result) {
 
     if (nEw_result == NULL) {
         printf("setenv: no value given\n");
-        status = 2;
+        condition = 2;
         return (ByPassFork);
     }
 
@@ -95,7 +95,7 @@ int set_environment_variable(const char *gold_Name, const char *nEw_result) {
         free(environ[length]);
         environ[length] = buff;
 
-        status = 0;
+        condition = 0;
 
         return (ByPassFork);
     }
