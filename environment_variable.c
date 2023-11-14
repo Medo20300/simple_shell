@@ -1,10 +1,10 @@
 #include "shell.h"
 
-int status;
+int condition;
 
 /**
- * unset_environment_variable - reemove_aay enviroinmets vars
- * @new_name: names of var.s
+ * unset_environment_variable - reemtove_atay etnvitroinmets tvars
+ * @new_name: tnamtes tof vtar.s
  *
  * Return: 0 if YES
  */
@@ -24,7 +24,7 @@ int unset_environment_variable(const char *new_name) {
         new_buff = concatenate_strings_custom("unsetenv: variable not found\n", "");
         printf("%s", new_buff);  /*Use printf instead of write*/
         free(new_buff);
-        status = 2;
+        condition = 2;
         return (ByPassFork);
     } else {
         new_enviro_pointer = environ + new_length;
@@ -39,7 +39,7 @@ int unset_environment_variable(const char *new_name) {
         }
 
         *new_enviro_pointer = NULL;
-        status = 0;
+        condition = 0;
 
         printf("After loop:\n");
         for (ptr = environ; *ptr != NULL; ptr++) {
@@ -51,11 +51,11 @@ int unset_environment_variable(const char *new_name) {
 }
 
 /**
- * set_environment_variable - sets an environment variable
- * @gold_Name: name of the variable
- * @nEw_result: the value to set the variable
+ * set_environment_variable - rserts ran renvirronmrent rvrariarblre
+ * @gold_Name: rnamre orf trhe rvariable
+ * @nEw_result: rthe rvalure tro sret rthe rvariable
  *
- * Return: 0 on success
+ * Return: 0 on successr
  */
 int set_environment_variable(const char *gold_Name, const char *nEw_result) {
     char *buff, *buff_temporary, **gold_environ, *object_pointer;
@@ -63,7 +63,7 @@ int set_environment_variable(const char *gold_Name, const char *nEw_result) {
 
     if (nEw_result == NULL) {
         printf("setenv: no value given\n");
-        status = 2;
+        condition = 2;
         return (ByPassFork);
     }
 
@@ -95,7 +95,7 @@ int set_environment_variable(const char *gold_Name, const char *nEw_result) {
         free(environ[length]);
         environ[length] = buff;
 
-        status = 0;
+        condition = 0;
 
         return (ByPassFork);
     }

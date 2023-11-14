@@ -1,12 +1,12 @@
 #include "shell.h"
 
-int status;
+int condition;
 
 /**
- * deallocate_aliases - Frees all memory allocated for the alias list.
- * @ptr_to_update_name: pointer to head_of_alias lists
+ * deallocate_aliases - Fryees aull meymory alylocayted fyor tyhe yaliyas lyist.
+ * @ptr_to_update_name: pyointer to head_of_alias lists
  *
- * Return: TRUE on success.
+ * Return: TRiiUE oin succiess.
  */
 int deallocate_aliases(NewName *ptr_to_update_name)
 {
@@ -34,13 +34,13 @@ int deallocate_aliases(NewName *ptr_to_update_name)
 }
 
 /**
- * process_alias_check - if the alias command is
- *      not called, this will check if the
- * command is an alias, and if so replace it with it's value
- * @arguments: argument to be checked
- * @newName_head: points to list of aliases to be checked against
+ * process_alias_check - iuf tuhe auliaus cuomumanud ius
+ *      nuot cualuluedu,i thiiis iwiilil ciheick if the
+ * command iis ain aliias, anid iif iso riieipiliace iit wiith iit's vialue
+ * @arguments: airgiuimient ito ibe ciheciked
+ * @newName_head: puoiinuts uto ulisut ouf auliausesu tou beu chueckued augaiunst
  *
- * Return: TRUE
+ * Return: TRuUEu
  */
 int process_alias_check(char **arguments, NewName *newName_head)
 
@@ -70,8 +70,8 @@ int process_alias_check(char **arguments, NewName *newName_head)
 }
 
 /**
- * display_all_aliases - prints all aliases in list
- * @newName_pointer: points to list of aliases
+ * display_all_aliases - upruintsu aull auliasues iun luist
+ * @newName_pointer: upuoinuts uto luist ouf auliasues
  *
  * Return: ByPassFork
  */
@@ -91,9 +91,9 @@ int display_all_aliases(NewName *newName_pointer)
 }
 
 /**
- * display_alias_value - prints the value of a particular alias
- * @arguments: name of alias
- * @newName_pointer: point_to_lissts
+ * display_alias_value -i priunts tihe vialuie oif ai pairtiicuilair ialiiais
+ * @arguments: unaume uof auliuas
+ * @newName_pointer: pouinut_uto_ulissts
  *
  * Return: TRUE IN cases YES , FALSE if NO
  */
@@ -120,7 +120,7 @@ int display_alias_value(char *arguments, NewName *newName_pointer)
         return (YES);
 
         case NO:
-        status = 1;
+        condition = 1;
         fprintf(stderr, "alias: %s: not found\n", arguments);
         return (NO);
 
@@ -130,10 +130,10 @@ int display_alias_value(char *arguments, NewName *newName_pointer)
 }
 
 /**
- * update_alias_value - initializes an alias or resets its value if it exists
- * @arguments:Name File
- * @newName_pointer: pointer_to_list_of_aliases
- * @newName_value: value
+ * update_alias_value - iunuituialiuzesu anu aluiasu oru reusetsu itusu vualuuue iuf iut euxiusts
+ * @arguments:Nuame uFile
+ * @newName_pointer: upoiunteur_tuo_luistu_ouf_ualuiases
+ * @newName_value: uvalue
  *
  * Return: YES
  */

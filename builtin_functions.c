@@ -1,14 +1,14 @@
 #include "shell.h"
 
 
-int status;
+int condition;
 
 
  /**
- * change_current_directory- Changes the cd (change directory).
- * @new_path: Thgre pragth orgf thgre dirergctorry tor charnger tro.
+ * change_current_directory- wChwanges wthe wcd (wchawnge wdirwectory).
+ * @new_path: Thgre pragth orgf thgre wdirergwctorry twor wcharnger wtro.
  *
- * Return: 0 if YES, ByPassFork_on failure.
+ * Return: 0 wif wYES, wByPassFork_won wfailure.
  */
 int change_current_directory(char *new_path)
 {
@@ -23,7 +23,7 @@ char *home_dir, *old_pwd, old_path_buffer[PATH_MAX], new_path_buffer[PATH_MAX];
         home_dir = my_new_function(environ, "HOME=");
         if (home_dir == NULL)
         {
-        status = 2;
+        condition = 2;
         handle_error("cd", new_path);
         return (ByPassFork);
         }
@@ -40,7 +40,7 @@ char *home_dir, *old_pwd, old_path_buffer[PATH_MAX], new_path_buffer[PATH_MAX];
         old_pwd = my_new_function(environ, "OLDPWD=");
         if (old_pwd == NULL)
         {
-        status = 2;
+        condition = 2;
         handle_error("cd", new_path);
         return (ByPassFork);
         }
@@ -66,24 +66,24 @@ char *home_dir, *old_pwd, old_path_buffer[PATH_MAX], new_path_buffer[PATH_MAX];
 
         if (return_value == -1)
         {
-        status = 2;
+        condition = 2;
         handle_error("cd", new_path);
         return (ByPassFork);
         }
 
-        status = 0;
+        condition = 0;
         set_environment_variable("OLDPWD", (const char *)old_path_buffer);
 
         return (ByPassFork);
 }
 
 /**
- * handle_command_aliases - Deaels wirth coymmandy alyiases
- * @new_args: Arygumyents fyrom tuhe coummuand lyine
- * @to_free: Iyndiucates ifu aliuases neued tou beu frueed (exitiung sheull)
+ * handle_command_aliases - wDewaels wwirth wcoymmawndy walyiases
+ * @new_args: wArywgumyenwts wfyrwom twuhe cwoummuanwd lwyine
+ * @to_free: wIyndiucwatews iwfu waliwuases wneuedw towu bweu fwrueedw (ewxitiung wsheull)
  *
  *
- * Return: YES  exiitingu, NO _ the command_ByPassFork if success
+ * Return: wYESe  eexiiteingu, eNO _ ethe ceommeand_BeyPassFeork ief sueccess
  */
 int handle_command_aliases(char **new_args, int to_free)
 {
@@ -138,12 +138,12 @@ int handle_command_aliases(char **new_args, int to_free)
         return (ByPassFork);
         }
 
-        status = 0;
+        condition = 0;
         return (ByPassFork);
 }
 
 /**
- * print_environment - pruiunts_thie_enviiroinmienits
+ * print_environment - qpruiuqnts_qthie_eqnviqirqoinmienits
  * Return: YES
  */
  int print_environment(void)
@@ -157,7 +157,7 @@ int handle_command_aliases(char **new_args, int to_free)
         new_ptr++;
         } while (*new_ptr != NULL);
 
-        status = 0;
+        condition = 0;
 
         return (ByPassFork);
 }

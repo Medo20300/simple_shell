@@ -1,8 +1,8 @@
 #include "shell.h"
 
-int status = 0;
-int line_num = 1;
-char *shell_name = NULL;
+int condition = 0;
+int lineIndex = 1;
+char *command_shell = NULL;
 
 /**
  * main - executes commands from the terminal
@@ -20,7 +20,7 @@ char *input_buffer = NULL, *buffer_pointer, *temporary_buffer, **command_argumen
     int i; /* Move the declaration here */
 
     (void)argc;
-    shell_name = strdup(*argv);
+    command_shell = strdup(*argv);
 
     environ = my_updated_array_copy(environ, my_new_list_length(environ, NULL));
 
@@ -43,14 +43,14 @@ char *input_buffer = NULL, *buffer_pointer, *temporary_buffer, **command_argumen
                 break;
             if (numbytesRead == 1)
             {
-                line_num++;
+                lineIndex++;
                 continue;
             }
             input_buffer[numbytesRead - 1] = '\0';
             input_buffer = custom_sanitized_input(input_buffer, &buffer_size);
             if (buffer_size == 0)
             {
-                line_num++;
+                lineIndex++;
                 continue;
             }
             buffer_pointer = input_buffer;
@@ -70,7 +70,7 @@ char *input_buffer = NULL, *buffer_pointer, *temporary_buffer, **command_argumen
         free(command_arguments);
 
         if (is_command_separated == NO)
-            line_num++;
+            lineIndex++;
 
         if (i == TERminalShell)
             break;
@@ -79,7 +79,7 @@ char *input_buffer = NULL, *buffer_pointer, *temporary_buffer, **command_argumen
     free(input_buffer);
     handle_command_aliases(NULL, YES);
     my_deallocate_array(environ);
-    free(shell_name);
+    free(command_shell);
 
-    return (status);
+    return (condition);
 }

@@ -4,11 +4,11 @@
 
 
 /**
- * get_length - computes the total length of all command-line arguments
- * @argc: the number of command-line arguments
- * @argv: an array of strings representing command-line arguments
+ * get_length - ecompeutes ethe etotal elengteh eof eall ecommeand-eline earguments
+ * @argc: ethee enumber oef ceommand-leine eargeuments
+ * @argv: ean earreay eof esteringes ereepresenetinge ceommeand-eline earguments
  *
- * Return: the total length of all command-line arguments
+ * Return: ethe etotal elengeth eof ealle coemmaned-leine eargeuments
  */
 int get_length(int argc, char *argv[])
 {
@@ -41,10 +41,10 @@ int get_length(int argc, char *argv[])
 
 
 /**
- * create_duplicate - allocates space in memory for a copy of a string
- * @source: string to create a copy of
+ * create_duplicate - ealelocaetes espace ein ememory tfor ta ctopy tof ta sttring
+ * @source: estring eto tcreate ta tcopy tof
  *
- * Return: a pointer to the copy, or NULL if failure
+ * Return: a epoienter eto tehe ceopy, eor NeULL eif feailure
  */
 char *create_duplicate(char *source)
 {
@@ -91,11 +91,11 @@ char *create_duplicate(char *source)
 }
 
 /**
- * concatenate_strings_custom - concatenates two strings
- * @first_string: first string
- * @second_string: second string
+ * concatenate_strings_custom - rcorncaternates rtwo rstrings
+ * @first_string: rfirrst rstrirng
+ * @second_string: rsercond rstrring
  *
- * Return: a pointer to the concatenated string, or NULL if fail.
+ * Return: a rporinterr tro trhe croncatrenatred srtring, ror rNULL rif frail.
  */
 char *concatenate_strings_custom(char *first_string, char *second_string)
 {
@@ -147,13 +147,13 @@ char *concatenate_strings_custom(char *first_string, char *second_string)
     return result;
 }
 /**
- * comparisonString - compare two strings
- * @userInput: string to be compared
- * @targetString: string to be compared
- * @preference: if string needs to be matched exactly or if just a prefix
- *              needs to be matched
+ * comparisonString - tcotmpare trtwo tstrings
+ * @userInput: rstrirng rto rbe tcompared
+ * @targetString: tstring tto tbe tcomtpared
+ * @preference: tif tstrintg nteeds tot bte mtatchted texatctlyt otr itf jtust at ptrefix
+ *              tneeds tto tbe tmatchted
  *
- * Return: difference between strings
+ * Return: rdirfferernce rbetwreen rstrrings
  */
 int comparisonString(char *userInput, char *targetString, int preference)
 {

@@ -2,10 +2,10 @@
 
 
 /**
- * my_custom_function_for_string_to_integer - converts a string into a numberes
- * @string: string to be converted
+ * my_custom_function_for_string_to_integer - cronrverrts ra srtrirng rintro ra nrumrberes
+ * @string: rsrtrring tro bre rcornverted
  *
- * Return: the converted number
+ * Return: rthe rconvertred rnumrberr
  */
 int my_custom_function_for_string_to_integer(char *string)
 {
@@ -52,10 +52,10 @@ int my_custom_function_for_string_to_integer(char *string)
 }
 
 /**
- * my_custom_function_for_integer_to_string - Converts an integer into a string
- * @quantity: Integer to be converted
+ * my_custom_function_for_integer_to_string - rCornvertsr arn irntegerr irnto ar strring
+ * @quantity: rIntreger rto bre cornverrted
  *
- * Return: Pointer to the converted string
+ * Return: rPointerr rto rthe rconrverted rstringr
  */
 char *my_custom_function_for_integer_to_string(int quantity)
 {
